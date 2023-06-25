@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             Generate_Button = new Button();
             Input_Box = new TextBox();
             pictureBox1 = new PictureBox();
             Save_Qr = new Button();
             label1 = new Label();
-            panel1 = new Panel();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // Generate_Button
             // 
-            Generate_Button.Location = new Point(41, 142);
+            Generate_Button.Location = new Point(140, 192);
             Generate_Button.Name = "Generate_Button";
             Generate_Button.Size = new Size(145, 73);
             Generate_Button.TabIndex = 0;
@@ -68,7 +70,7 @@
             // 
             // Save_Qr
             // 
-            Save_Qr.Location = new Point(237, 142);
+            Save_Qr.Location = new Point(140, 291);
             Save_Qr.Name = "Save_Qr";
             Save_Qr.Size = new Size(145, 73);
             Save_Qr.TabIndex = 3;
@@ -86,27 +88,24 @@
             label1.TabIndex = 4;
             label1.Text = "Enter your text ";
             // 
-            // panel1
+            // timer1
             // 
-            panel1.BackColor = SystemColors.ActiveCaptionText;
-            panel1.Location = new Point(421, 2);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(2, 449);
-            panel1.TabIndex = 5;
+            timer1.Interval = 10;
+            timer1.Tick += timer1_Tick;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1079, 455);
-            Controls.Add(panel1);
+            ClientSize = new Size(424, 455);
             Controls.Add(label1);
             Controls.Add(Save_Qr);
             Controls.Add(pictureBox1);
             Controls.Add(Input_Box);
             Controls.Add(Generate_Button);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
-            Text = "Form1";
+            Text = "QR Code";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -120,6 +119,6 @@
         private PictureBox pictureBox1;
         private Button Save_Qr;
         private Label label1;
-        private Panel panel1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

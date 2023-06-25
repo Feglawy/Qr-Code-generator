@@ -12,6 +12,10 @@ namespace Qrcode_Generator
         private void Generate_Button_Click(object sender, EventArgs e)
         {
             pictureBox1.Image = Qr_Functions.Get_Qr(Input_Box.Text);
+            if (this.Width < 1100)
+            {
+                timer1.Enabled = true;
+            }
         }
 
         private void Save_Qr_Click(object sender, EventArgs e)
@@ -24,6 +28,19 @@ namespace Qrcode_Generator
         private void Form1_Load(object sender, EventArgs e)
         {
             pictureBox1.Image = Qr_Functions.Get_Qr("hi");
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (this.Size.Width < 1040)
+            {
+                this.Width += 100;
+            }
+            else
+            {
+                this.Width += 60;
+                timer1.Enabled = false;
+            }
         }
     }
 }
