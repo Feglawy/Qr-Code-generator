@@ -20,19 +20,15 @@ namespace Qrcode_Generator
 
         public static void Save_Qr(Bitmap qrcode)
         {
-            string appPath = Application.ExecutablePath;
 
             // Create a SaveFileDialog object.
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-
-            // Set the default location.
-            saveFileDialog.InitialDirectory = appPath;
             
             // Set the default file name.
-            saveFileDialog.FileName = "NewBitmap.bmp";
+            saveFileDialog.FileName = "Qr.png";
 
             // Set the filter to only show bitmap files.
-            saveFileDialog.Filter = "Bitmap Files (*.bmp)|*.bmp";
+            saveFileDialog.Filter = "Bitmap Files (*.bmp)|*.png";
 
             // Show the save as dialog.
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
