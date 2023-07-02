@@ -63,7 +63,7 @@
             // 
             pictureBox1.Location = new Point(421, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(646, 446);
+            pictureBox1.Size = new Size(669, 526);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -97,7 +97,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(424, 455);
+            ClientSize = new Size(423, 540);
             Controls.Add(label1);
             Controls.Add(Save_Qr);
             Controls.Add(pictureBox1);
