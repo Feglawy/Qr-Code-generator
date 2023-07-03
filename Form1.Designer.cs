@@ -35,7 +35,10 @@
             pictureBox1 = new PictureBox();
             Save_Qr = new Button();
             label1 = new Label();
-            timer1 = new System.Windows.Forms.Timer(components);
+            Width_increase_timer = new System.Windows.Forms.Timer(components);
+            Hight_increase_timer = new System.Windows.Forms.Timer(components);
+            Hight_decrease_timer = new System.Windows.Forms.Timer(components);
+            Width_decrease_timer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -88,16 +91,31 @@
             label1.TabIndex = 4;
             label1.Text = "Enter your text ";
             // 
-            // timer1
+            // Width_increase_timer
             // 
-            timer1.Interval = 10;
-            timer1.Tick += timer1_Tick;
+            Width_increase_timer.Interval = 10;
+            Width_increase_timer.Tick += Width_increase_timer_Tick;
+            // 
+            // Hight_increase_timer
+            // 
+            Hight_increase_timer.Interval = 10;
+            Hight_increase_timer.Tick += Hight_increase_timer_Tick;
+            // 
+            // Hight_decrease_timer
+            // 
+            Hight_decrease_timer.Interval = 10;
+            Hight_decrease_timer.Tick += Hight_decrease_timer_Tick;
+            // 
+            // Width_decrease_timer
+            // 
+            Width_decrease_timer.Interval = 10;
+            Width_decrease_timer.Tick += Width_decrease_timer_Tick;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(423, 540);
+            ClientSize = new Size(424, 540);
             Controls.Add(label1);
             Controls.Add(Save_Qr);
             Controls.Add(pictureBox1);
@@ -106,7 +124,6 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "QR Code";
-            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -119,6 +136,9 @@
         private PictureBox pictureBox1;
         private Button Save_Qr;
         private Label label1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer Width_increase_timer;
+        private System.Windows.Forms.Timer Hight_increase_timer;
+        private System.Windows.Forms.Timer Hight_decrease_timer;
+        private System.Windows.Forms.Timer Width_decrease_timer;
     }
 }
