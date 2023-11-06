@@ -18,7 +18,7 @@ namespace Qrcode_Generator
             pictureBox1.Width = bmp.Width;
             pictureBox1.Height = bmp.Height;
 
-            int new_height = pictureBox1.Height + 60;
+            int new_height = pictureBox1.Height + 130;
             int new_width = pictureBox1.Width + 440;
 
             pictureBox1.Location = new Point(900 / 2, 40);
@@ -82,7 +82,7 @@ namespace Qrcode_Generator
 
         private void Width_decrease_timer_Tick(object sender, EventArgs e)
         {
-            if (this.Size.Width >  pictureBox1.Width + 600)
+            if (this.Size.Width > pictureBox1.Width + 600)
             {
                 this.Width -= 60;
             }
