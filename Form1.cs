@@ -103,5 +103,17 @@ namespace Qrcode_Generator
                 Hight_decrease_timer.Enabled = false;
             }
         }
+
+        private void Input_Box_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                string s = Input_Box.Text;
+                string removedNewLine = s.Trim('\r', '\n');
+                Input_Box.Text = removedNewLine;
+
+                Generate_Button.PerformClick();
+            }
+        }
     }
 }

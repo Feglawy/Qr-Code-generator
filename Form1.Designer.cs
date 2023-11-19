@@ -61,7 +61,7 @@
             Input_Box.Size = new Size(403, 73);
             Input_Box.TabIndex = 1;
             Input_Box.TextAlign = HorizontalAlignment.Center;
-            Input_Box.TextChanged += Generate_Button_Click;
+            Input_Box.KeyUp += Input_Box_KeyUp;
             // 
             // pictureBox1
             // 
